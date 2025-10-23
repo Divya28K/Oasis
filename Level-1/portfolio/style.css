@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #f8f9fa, #e8f0fe);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px 0;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffeb3b;
+  text-shadow: 0 0 10px #ffeb3b;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #3f51b5;
+}
+
+p, li {
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* Home Section */
+#home {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding-top: 120px;
+}
+
+
+#home h1 {
+  font-size: 2.5em;
+  color: #00e5ff; /* bright blue text */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* soft glow for contrast */
+}
+
+#home p {
+  font-size: 1.2em;
+  color: #fff; /* ensures paragraph stays white */
+}
+
+/* Skills Section */
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills li {
+  margin: 10px 0;
+  background: #f0f8ff;
+  border-left: 5px solid #007bff;
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#skills li:hover {
+  background: #dbeafe;
+  transform: scale(1.03);
+}
+
+/* Projects Section */
+#projects li {
+  margin: 15px 0;
+  background: #fff3cd;
+  padding: 12px;
+  border-left: 5px solid #ffc107;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#projects li:hover {
+  background: #fff9e6;
+  transform: scale(1.03);
+}
+
+/* Internship Section */
+#internship li {
+  margin: 15px 0;
+  background: #e3fcef;
+  padding: 12px;
+  border-left: 5px solid #28a745;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#internship li:hover {
+  background: #d2f4e3;
+  transform: scale(1.03);
+}
+
+/* Certificates Section */
+#certificates li {
+  margin: 10px 0;
+  background: #fbe9e7;
+  padding: 10px;
+  border-left: 5px solid #ff5722;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#certificates li:hover {
+  background: #ffe0b2;
+  transform: scale(1.03);
+}
+
+/* Contact Section */
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contact a:hover {
+  color: #6610f2;
+}
+
+/* Footer */
+footer {
+  background: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}

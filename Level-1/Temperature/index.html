@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+  <div class="converter">
+    <h2>🌡️ Temperature Converter</h2>
+
+    <input type="number" id="tempInput" placeholder="Enter temperature" />
+
+    <label for="fromScale">From:</label>
+    <select id="fromScale">
+      <option value="C">Celsius (°C)</option>
+      <option value="F">Fahrenheit (°F)</option>
+      <option value="K">Kelvin (K)</option>
+    </select>
+
+    <label for="toScale">To:</label>
+    <select id="toScale">
+      <option value="C">Celsius (°C)</option>
+      <option value="F">Fahrenheit (°F)</option>
+      <option value="K">Kelvin (K)</option>
+    </select>
+
+    <button onclick="convertTemperature()">Convert</button>
+
+    <textarea id="result" readonly placeholder="Converted value will appear here..."></textarea>
+  </div>
+
+  <script >
+    function convertTemperature() {
+      const inputTemp = parseFloat(document.getElementById("tempInput").value);
+      const fromScale = document.getElementById("fromScale").value;
+      const toScale = document.getElementById("toScale").value;
+      const resultArea = document.getElementById("result");
+
+      if (isNaN(inputTemp)) {
+        resultArea.value = "⚠️ Please enter a valid number!";
+        return;
+      }
+
+      let tempInCelsius;
+
+      // Convert from selected scale to Celsius first
+      if (fromScale === "C") {
+        tempInCelsius = inputTemp;
+      } else if (fromScale === "F") {
+        tempInCelsius = (inputTemp - 32) * 5 / 9;
+      } else if (fromScale === "K") {
+        tempInCelsius = inputTemp - 273.15;
+      }
+
+      let convertedTemp;
+
+      // Convert from Celsius to the desired scale
+      if (toScale === "C") {
+        convertedTemp = tempInCelsius;
+      } else if (toScale === "F") {
+        convertedTemp = (tempInCelsius * 9 / 5) + 32;
+      } else if (toScale === "K") {
+        convertedTemp = tempInCelsius + 273.15;
+      }
+
+      // Show the result
+      resultArea.value = `${inputTemp}°${fromScale} = ${convertedTemp.toFixed(2)}°${toScale}`;
+    }
+  </script>
+
+</body>
+</html>
